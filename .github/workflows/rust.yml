@@ -1,0 +1,40 @@
+name: Rust CI/CD Pipeline
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Install Rust
+      uses: actions-rs/toolchain@v1
+      with:
+        toolchain: stable
+        override: true
+
+    - name: Check
+      run: cargo check
+
+    - name: Format
+      run: cargo fmt
+
+    - name: Test
+      run: cargo test
+
+    - name: Release
+      run: cargo build --release
+
+    - name: Upload Binary Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: Cindy_Gao_week7_rust_template
+        path: target/release/Cindy_Gao_week7_rust_template

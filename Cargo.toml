@@ -1,0 +1,8 @@
+[package]
+name = "Cindy_Gao_week7_rust_template"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rusqlite = "0.29.0"
+clap = { version = "4.0", features = ["derive"] }
