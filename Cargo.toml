@@ -1,8 +1,26 @@
 [package]
-name = "Cindy_Gao_week7_rust_template"
+name = "cindy_gao_mini_week8"
 version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-rusqlite = "0.29.0"
+# Core functionality
+tokio = { version = "1", features = ["full"] }
+anyhow = "1.0"
+
+# CLI Argument Parsing
 clap = { version = "4.0", features = ["derive"] }
+
+# Environment variable management
+dotenvy = "0.15"
+
+# HTTP requests and JSON serialization
+reqwest = { version = "0.11", features = ["blocking", "json"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# System monitoring and utility libraries
+sysinfo = "0.24"
+rand = "0.8"
+rusqlite = "0.29.0"
+csv = "1.1"

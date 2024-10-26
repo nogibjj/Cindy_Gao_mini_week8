@@ -36,5 +36,5 @@ jobs:
     - name: Upload Binary Artifact
       uses: actions/upload-artifact@v4
       with:
-        name: Cindy_Gao_week7_rust_template
-        path: target/release/Cindy_Gao_week7_rust_template
+        name: Cindy_Gao_mini_week8
+        path: target/release/Cindy_Gao_mini_week8
