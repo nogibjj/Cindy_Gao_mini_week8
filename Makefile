@@ -44,14 +44,14 @@ install_py:
 		pip install -r requirements.txt
 
 test_py:
-	python -m pytest -vv --cov=main --cov=mylib test_*.py
+	python -m pytest -vv --cov=main --cov=lib test_*.py
 
 format_py:	
-	black *.py mylib/*.py 
+	black *.py lib/*.py 
 
 lint_py:
 	# Run ruff for linting with line length configuration
-	ruff check --line-length 100 *.py mylib/*.py
+	ruff check --line-length 100 *.py lib/*.py
 
 container-lint_py:
 	# Lint Dockerfile using hadolint container
