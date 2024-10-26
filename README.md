@@ -1,6 +1,7 @@
 [![Python CI/CD Pipeline](https://github.com/nogibjj/Cindy_Gao_mini_week8/actions/workflows/python.yml/badge.svg)](https://github.com/nogibjj/Cindy_Gao_mini_week8/actions/workflows/python.yml)
 [![Rust CI/CD Pipeline](https://github.com/nogibjj/Cindy_Gao_mini_week8/actions/workflows/rust.yml/badge.svg)](https://github.com/nogibjj/Cindy_Gao_mini_week8/actions/workflows/rust.yml)
 
+
 # Mini Project 8: Rewrite a Python Script in Rust
 ## Requirements
 * Take an existing Python script for data processing
