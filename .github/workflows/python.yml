@@ -1,4 +1,4 @@
-name: CI for python scripts
+name: Python CI/CD Pipeline
 on:
   push:
     branches: [ "main" ]
@@ -11,20 +11,20 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.9]
+        python-version: [3.10]
     steps:
       - uses: actions/checkout@v3
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python-version }}
-      - name: install packages
-        run: make install
-      - name: lint
-        run: make lint
-      - name: test
-        run: make test
-      - name: format
-        run: make format
-      # - name: deploy
-      #   run: make deploy
+      - name: install packages_py
+        run: make install_py
+      - name: lint_py
+        run: make lint_py
+      - name: test_py
+        run: make test_py
+      - name: format_py
+        run: make format_py
+      - name: deploy_py
+        run: make deploy_py
