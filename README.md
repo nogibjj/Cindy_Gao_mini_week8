@@ -45,7 +45,6 @@ CINDY_GAO_MINI_WEEK8/
 ├── requirements.txt               # Python dependencies file
 └── user_guide.md                  # User guide for the project
 ```
-<br><br>
 ## Performance Report: Python VS. Rust
 ### Rust Performance
 | Metric                  | Value               |
