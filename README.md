@@ -67,3 +67,11 @@ CINDY_GAO_MINI_WEEK8/
 |-----------|----------------|---------------------|---------------------|------------------|
 | **Rust**  | 1.702875 ms    | 17,029,037 KB      | 17,029,037 KB      | 0 KB            |
 | **Python**| 0.30 ms        | 33,984 KB          | 34,000 KB          | 16 KB           |
+
+### Improvements in speed and resource usage
+* __Speed:__ Python was faster for this simple task, with an execution time of 0.30 ms versus Rust's 1.70 ms. Python’s high-level optimizations can sometimes give it an edge in simpler operations.
+* __Memory Efficiency:__ Rust showed zero memory growth, keeping memory usage constant, while Python consumed an additional 16 KB. Rust’s strict memory management makes it highly efficient, especially for larger applications.
+* __Best Use Cases:__
+Rust: Ideal for resource-intensive tasks where memory predictability and efficiency are crucial.
+Python: Great for rapid prototyping and tasks where speed in development outweighs strict resource control.
+* __Conclusion:__ Rust offers advantages in resource management and predictable memory usage, which can lead to better performance in high-demand applications. Python, however, remains a strong choice for rapid development and tasks where execution speed is prioritized over strict memory management.
