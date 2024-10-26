@@ -32,8 +32,11 @@ class TestMainFunctions(unittest.TestCase):
         if cursor.fetchone() is None:
             print("Inserting 'Chicago' record...")
             cursor.execute(
-                "INSERT INTO Murder2015 (city, state, murders_2014, murders_2015, change) VALUES (?, ?, ?, ?, ?)",
+                """
+                INSERT INTO Murder2015 (city, state, murders_2014, murders_2015, change) 
+                VALUES (?, ?, ?, ?, ?)",
                 ("Chicago", "Illinois", 411, 478, 67),
+                """
             )
             conn.commit()
         conn.close()
