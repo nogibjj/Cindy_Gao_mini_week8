@@ -48,7 +48,7 @@ install_py:
 		pip install -r requirements.txt
 
 test_py:
-	python -m pytest -vv --cov=lib --cov-report=term-missing lib/test_main.py
+	PYTHONPATH=. python -m pytest -vv --cov=lib --cov-report=term-missing lib/test_main.py
 
 format_py:
 	black lib/*.py
@@ -73,5 +73,4 @@ all_py: install_py format_py lint_py test_py deploy_py
 
 all: all_rust all_py
 	@echo "All Rust and Python tasks have been completed"
-
 

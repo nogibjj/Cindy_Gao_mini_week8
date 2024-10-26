@@ -1,9 +1,9 @@
 import sqlite3
 import os
 import unittest
-from extract import extract
-from transform_load import load
-from query import read_query, update_query, delete_query, sorting_Change
+from lib.extract import extract
+from lib.query import read_query, update_query, delete_query, sorting_Change
+from lib.transform_load import load
 
 
 class TestMainFunctions(unittest.TestCase):
