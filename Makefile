@@ -13,7 +13,7 @@ install:
 	# Install if needed
 	#@echo "Updating rust toolchain"
 	#rustup update stable
-	#rustup default stable
+	#rustup default stable 
 
 lint:
 	cargo clippy --quiet
@@ -26,7 +26,9 @@ run:
 
 release:
 	cargo build --release
+	
 
+# 'all' target to format, lint, test, and run
 all: 
 	@echo "Running the 'all' target"
 	# Call the make targets for format, lint, test, and run
@@ -34,3 +36,32 @@ all:
 	make lint
 	make test
 	make run
+
+
+# Python setup and scripts
+install_py:
+	pip install --upgrade pip && \
+		pip install -r requirements.txt
+
+test_py:
+	python -m pytest -vv --cov=main --cov=mylib test_*.py
+
+format_py:	
+	black *.py mylib/*.py 
+
+lint_py:
+	# Run ruff for linting with line length configuration
+	ruff check --line-length 100 *.py mylib/*.py
+
+container-lint_py:
+	# Lint Dockerfile using hadolint container
+	docker run --rm -i hadolint/hadolint < Dockerfile
+
+refactor_py: format_py lint_py
+
+deploy_py:
+	# Placeholder for deployment steps
+	@echo "Deployment steps go here"
+
+all_py: install_py format_py lint_py test_py deploy_py
+
