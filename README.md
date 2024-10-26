@@ -2,13 +2,13 @@
 [![Rust CI/CD Pipeline](https://github.com/nogibjj/Cindy_Gao_mini_week8/actions/workflows/rust.yml/badge.svg)](https://github.com/nogibjj/Cindy_Gao_mini_week8/actions/workflows/rust.yml)
 
 # Mini Project 8: Rewrite a Python Script in Rust
-## Requirements:<br>
+## Requirements
 * Take an existing Python script for data processing
 * Rewrite it in Rust
-* Highlight improvements in speed and resource usage
+* Highlight improvements in speed and resource usage <br><br>
 
 
-## Raw Data:
+## Raw Data
 https://raw.githubusercontent.com/fivethirtyeight/data/refs/heads/master/murder_2016/murder_2015_final.csv <br><br>
 The dataset presents the numbers of murders in 2014 and 2015, grouped by different cities in the US. <br><br>
 
@@ -28,7 +28,7 @@ CINDY_GAO_MINI_WEEK8/
 │   ├── main.py                    # Main entry point for Python
 │   ├── query.py                   # Query functions for database operations
 │   ├── transform_load.py          # Transform and load functions
-│   └── test_main.py               # Python test file
+│   └── test_main.py               # Python test file for the functions above
 ├── src/                           # Rust source files
 │   ├── lib.rs                     # Rust library functions
 │   └── main.rs                    # Rust main program
@@ -45,4 +45,26 @@ CINDY_GAO_MINI_WEEK8/
 ├── requirements.txt               # Python dependencies file
 └── user_guide.md                  # User guide for the project
 ```
+<br><br>
+## Performance Report: Python VS. Rust
+### Rust Performance
+| Metric                  | Value               |
+|-------------------------|---------------------|
+| Execution Time          | 1.702875 ms         |
+| Memory Usage Before     | 17,029,037 KB       |
+| Memory Usage After      | 17,029,037 KB       |
+| Memory Consumed         | 0 KB                |
 
+### Python Performance
+| Metric                  | Value               |
+|-------------------------|---------------------|
+| Execution Time          | 0.30 ms             |
+| Memory Usage Before     | 33,984 KB           |
+| Memory Usage After      | 34,000 KB           |
+| Memory Consumed         | 16 KB               |
+
+### Comparison summary
+| Language  | Execution Time | Memory Usage Before | Memory Usage After | Memory Consumed |
+|-----------|----------------|---------------------|---------------------|------------------|
+| **Rust**  | 1.702875 ms    | 17,029,037 KB      | 17,029,037 KB      | 0 KB            |
+| **Python**| 0.30 ms        | 33,984 KB          | 34,000 KB          | 16 KB           |
