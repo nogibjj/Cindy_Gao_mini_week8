@@ -1,6 +1,7 @@
 [![Python CI/CD Pipeline](https://github.com/nogibjj/Cindy_Gao_mini_week8/actions/workflows/python.yml/badge.svg)](https://github.com/nogibjj/Cindy_Gao_mini_week8/actions/workflows/python.yml)
 [![Rust CI/CD Pipeline](https://github.com/nogibjj/Cindy_Gao_mini_week8/actions/workflows/rust.yml/badge.svg)](https://github.com/nogibjj/Cindy_Gao_mini_week8/actions/workflows/rust.yml)
 
+
 # Mini Project 8: Rewrite a Python Script in Rust
 ## Requirements
 * Take an existing Python script for data processing
@@ -50,7 +51,7 @@ CINDY_GAO_MINI_WEEK8/
 ### Rust Performance
 | Metric                  | Value               |
 |-------------------------|---------------------|
-| Execution Time          | 1.702875 ms         |
+| Execution Time          | 1.70 ms         |
 | Memory Usage Before     | 17,029,037 KB       |
 | Memory Usage After      | 17,029,037 KB       |
 | Memory Consumed         | 0 KB                |
@@ -66,7 +67,7 @@ CINDY_GAO_MINI_WEEK8/
 ### Comparison summary
 | Language  | Execution Time | Memory Usage Before | Memory Usage After | Memory Consumed |
 |-----------|----------------|---------------------|---------------------|------------------|
-| **Rust**  | 1.702875 ms    | 17,029,037 KB      | 17,029,037 KB      | 0 KB            |
+| **Rust**  | 1.70 ms    | 17,029,037 KB      | 17,029,037 KB      | 0 KB            |
 | **Python**| 0.30 ms        | 33,984 KB          | 34,000 KB          | 16 KB           |
 
 ### Improvements in speed and resource usage
